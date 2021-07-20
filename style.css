@@ -1,0 +1,462 @@
+/*------------------------------------------------------
+
+DARK BLUE:                  #070724;
+CYAN:                       #419EBB;
+GREY BLUE:                  #38384F;
+GREY:                       #838391;
+YELLOW:                     #EDA249;
+PURPLE:                     #6F2ED6;
+ORANGE1:                    #D14C32;
+ORANGE2:                    #D83A34;
+MINT:                       #1EC2A4;
+BLUE:                       #2D68F0;
+
+-------------------------------------------------------*/
+
+/* ---------------------------------- BASIC -------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(214, 214, 214);
+    line-height: 25px;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden !important;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 103px;
+    font-family: 'Antonio', sans-serif;
+    color: white;
+    margin-bottom: 23px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 52px;
+    font-family: 'Antonio', sans-serif;
+    letter-spacing: -1.5px;
+}
+
+h3 {
+    font-size: 12px;
+    line-height: 25px;
+    font-family: 'Spartan', sans-serif;
+    letter-spacing: 2.6px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 11px;
+    line-height: 25px;
+    font-family: 'Spartan', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* ---------------------------------- BODY -------------------------------------------- */
+
+body {
+    background-color: #070724;
+    background-image: url(images/background-stars.jpg);
+    background-size: cover;
+    overflow-x: hidden !important;
+}
+
+nav {
+    border-bottom: 1px #979797 solid;
+    padding: 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #070724;
+}
+
+nav p {
+    font-size: 28px;
+    font-family: 'Antonio', sans-serif;
+    color: white;
+}
+
+.alternative-nav {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    height: calc(100vh - 69px);
+    width: calc(100% - 48px);
+    z-index: 999;
+    background-color: #070724;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+}
+
+.active-nav {
+    display: flex;
+}
+
+.mobile-list {
+    list-style: none;
+}
+
+.mobile-list .nav-link-mob {
+    border-bottom: 1px solid #979797;
+    display: flex;
+    align-items: center;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.mobile-list .nav-link-mob>div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+.mer {
+    background-color: #419EBB;
+}
+
+.ven {
+    background-color: #EDA249;
+}
+
+.ear {
+    background-color: #6F2ED6;
+}
+
+.mars {
+    background-color: #D14C32;
+}
+
+.jup {
+    background-color: #D83A34;
+}
+
+.sat {
+    background-color: #CD5120;
+}
+
+.ura {
+    background-color: #1EC1A2;
+}
+
+.nep {
+    background-color: #2D68F0;
+}
+
+.alternative-buttons {
+    height: 50px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px #979797 solid;
+}
+
+.alt-overview {
+    border-bottom: 3px solid #419EBB;
+}
+
+.alternative-buttons>a {
+    line-height: 47px;
+}
+
+.alt-structure,
+.alt-geology {
+    border-bottom: 3px solid transparent;
+}
+
+#nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-link {
+    color: #e0e0e0;
+    text-transform: uppercase;
+    border-top: 5px solid transparent;
+    margin-left: 33px;
+    line-height: 82px;
+    padding-top: 30px;
+}
+
+.nav-link:hover {
+    color: white;
+    border-top: 4px solid white;
+}
+
+/* ---------------------------------- SECTION -------------------------------------------- */
+
+.main-section {
+    padding: 125px 10% 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    max-width: 40%;
+}
+
+.image-container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-img {
+    position: absolute;
+    z-index: 90;
+}
+
+.geology-img {
+    width: 163px;
+    position: relative;
+    z-index: 99;
+    bottom: -180px;
+    display: none;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+}
+
+.wiki-link {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    border: 1px solid #979797;
+    padding: 12px 28px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.btn span {
+    margin-right: 28px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.overviewbtn {
+    background-color: #419EBB;
+}
+
+.wiki-link span {
+    margin-left: 5px;
+}
+
+/* ---------------------------------- CARDS -------------------------------------------- */
+
+.cards-container {
+    padding: 0 10% 125px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid #7c7c7c;
+    width: 200px;
+    padding: 20px;
+}
+
+.card h2 {
+    color: white;
+}
+
+/* -------------------------------- RESPONSIVE ------------------------------------------ */
+
+@media all and (max-width:1300px) {
+
+    .main-section {
+        padding: 125px 5%;
+    }
+
+}
+
+@media all and (max-width:1000px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav p {
+        margin-top: 32px;
+    }
+
+    .nav-link {
+        padding: 0 15px;
+        margin-left: 0;
+    }
+
+    .nav-link:hover {
+        color: white;
+        border-top: 4px solid transparent !important;
+    }
+
+    .main-section {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .image-container img {
+        max-width: 500px;
+    }
+
+    .text-container {
+        max-width: 100%;
+    }
+
+    .sub-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .description-container {
+        width: 50%;
+    }
+
+    .cards-container {
+        padding: 0 5% 125px 5%;
+    }
+
+}
+
+@media all and (max-width:850px) {
+
+    .nav-link {
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 135px;
+        padding: 24px 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .card p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .main-section {
+        padding-bottom: 28px;
+    }
+
+    .image-container {
+        width: 400px;
+        height: 500px;
+    }
+
+    .geology-img {
+        width: 120px;
+    }
+
+    .planet-img {
+        width: 300px;
+    }
+
+
+}
+
+@media all and (max-width:800px) {
+
+    .nav-link {
+        padding: 0 5px;
+    }
+
+}
+
+@media all and (max-width:700px) {
+
+    .buttons-container {
+        display: none;
+    }
+
+    .description-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .planet-name {
+        text-align: center;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        width: initial;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        height: 68px;
+    }
+
+    nav p {
+        margin: 0;
+    }
+
+    #nav-toggle {
+        display: block;
+        font-size: 25px;
+    }
+
+    .alternative-buttons {
+        display: flex;
+    }
+
+    .overviewbtn {
+        background-color: transparent;
+        line-height: 47px;
+        border-bottom: 4px solid #419EBB;
+    }
+
+}
+
+@media all and (max-width:400px) {
+
+    .planet-name {
+        font-size: 40px;
+    }
+
+    h1 {
+        line-height: 50px;
+    }
+
+}
